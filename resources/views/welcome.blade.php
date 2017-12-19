@@ -79,11 +79,12 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Laravel
+                    Calc X
                 </div>
 
                 <div class="links">
                     <a href="https://www.cryptocompare.com">Crypto compare Site</a>
+                    <b>Site em construcao. bebe.. nois fii..</b>
 
                 </div>
             </div>
