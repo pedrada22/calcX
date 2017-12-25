@@ -94,27 +94,30 @@
                     <b>Site em construcao. bebe.. nois fii..</b>
 
                 </div>
+                
+                <table class="table table-bordered">
+                    <tr><th>BTC</th><th>ETH</th><th>LTC</th><th>XRP</th><th>DASH</th><th>ZEC</th></tr>
+                    <tr><td><div id="BTC"> 1 </div></td><td><div id="ETH"> 1 </div></td><td><div id="LTC"> 1 </div></td><td><div id="XRP"> 1 </div></td><td><div id="DASH"> 1 </div></td><td><div id="ZEC"> 1 </div></td></tr>
+                    <script source="">
+                    
+                    $.getJSON( "https://min-api.cryptocompare.com/data/pricemulti?fsyms=BTC,ETH,LTC,XRP,DASH,ZEC&tsyms=USD", function( data ) {
+                    var items = [];
+                        $.each( data, function( key, val ) {
+                            $.each( val, function( key2, val2 ) {
+                                $("#"+key).html(val2);
+                            });
+                        });
+                    
+                    
+                    });
+                    
+                    </script>
+                </table>
+                
             </div>
         </div>
         
-        <table style="boarder: 1px black;">
-            <tr><th>BTC</th><th>ETH</th><th>LTC</th><th>XRP</th><th>DASH</th><th>ZEC</th></tr>
-            <tr><td><div id="BTC"> 1 </div></td><td><div id="ETH"> 1 </div></td><td><div id="LTC"> 1 </div></td><td><div id="XRP"> 1 </div></td><td><div id="DASH"> 1 </div></td><td><div id="ZEC"> 1 </div></td></tr>
-            <script source="">
-            
-            $.getJSON( "https://min-api.cryptocompare.com/data/pricemulti?fsyms=BTC,ETH,LTC,XRP,DASH,ZEC&tsyms=USD", function( data ) {
-            var items = [];
-                $.each( data, function( key, val ) {
-                    $.each( val, function( key2, val2 ) {
-                        $("#"+key).html(val2);
-                    });
-                });
-            
-            
-            });
-            
-            </script>
-        </table>
+        
         
     </body>
 </html>
