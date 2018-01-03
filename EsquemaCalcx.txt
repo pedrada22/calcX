@@ -1,0 +1,27 @@
+-- Geração de Modelo físico
+-- Sql ANSI 2003 - brModelo.
+
+
+
+CREATE TABLE user (
+name Texto(1),
+id_user Texto(1) PRIMARY KEY,
+email Texto(1)
+)
+
+CREATE TABLE wallet (
+id_wallet Texto(1) PRIMARY KEY,
+address Texto(1),
+id_user Texto(1),
+id_currency Texto(1),
+FOREIGN KEY(id_user) REFERENCES user (id_user)
+)
+
+CREATE TABLE currency (
+id_currency Texto(1) PRIMARY KEY,
+name Texto(1),
+url_to_get_balance Texto(1),
+free_text Texto(1)
+)
+
+ALTER TABLE wallet ADD FOREIGN KEY(id_currency) REFERENCES currency (id_currency)
