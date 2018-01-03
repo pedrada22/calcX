@@ -13,7 +13,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <title>CalcX</title>
-
+        
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
 
@@ -91,8 +93,7 @@
                     @endauth
                 </div>
             @endif
-
-            <div class="content">
+                <div class="content">
                 <div class="title m-b-md">
                     Calc X
                 </div>
@@ -101,12 +102,16 @@
 
                 </div>
 
-                <table class="table table-bordered">
-                    <tr><th>...</th><th>BTC</th><th>ETH</th><th>LTC</th><th>XRP</th><th>DASH</th><th>ZEC</th></tr>
-                    <tr><td><div id="USD"><b>USD</b></div></td><td><div id="BTC"> 0 </div></td><td><div id="ETH"> 0 </div></td><td><div id="LTC"> 0 </div></td><td><div id="XRP"> 0 </div></td><td><div id="DASH"> 0 </div></td><td><div id="ZEC"> 0 </div></td></tr>
-                    <tr><td><div id="Coins"><b>Coins</b></div></td><td><input type="number" id="coin-BTC" value="0"></td><td><input type="number"  id="coin-ETH" value="0">  </td><td><input type="number"  id="coin-LTC" value="0">  </td><td><input type="number"  id="coin-XRP" value="0">  </td><td><input type="number"  id="coin-DASH" value="0"> </td><td><input type="number"  id="coin-ZEC" value="0"> </td></tr>
-                    <tr><td><div id="Total"><b>Total</b></div></td><td><div id="total-BTC">0</div></td><td><div id="total-ETH"> 0 </div></td><td><div id="total-LTC"> 0 </div></td><td><div id="total-XRP"> 0 </div></td><td><div id="total-DASH"> 0 </div></td><td><div id="total-ZEC"> 0 </div></td></tr>
-                    <tr><td><div id="Total_USD_desc"><b>Total USD</b></div></td><td><div id="total_USD_value">0</div></td><td><div id="desc_brl_usd"><b>U$D to BRL</b></div></td><td><div id="BRL_USD">0</div></td><td><div id="Total_BRL_desc"><b>Total est. BRL</b></div></td><td><div id="total_BRL_value">0</div></td>
+                               <div class="container">
+                <div class="row">
+                <div class="col-2 align-self-center">
+                <div class="table-responsive" >
+                <table class="table table-hover table-striped table-bordered" >
+                    <tr><th scope="col">...</th><th scope="col">BTC</th><th scope="col">ETH</th><th scope="col">LTC</th><th scope="col">XRP</th><th scope="col">DASH</th><th scope="col">ZEC</th></tr>
+                    <tr><td scope="row"><div id="USD"><b>USD</b></div></td><td scope="row"><div id="BTC"> 0 </div></td><td scope="row"><div id="ETH"> 0 </div></td><td scope="row"><div id="LTC"> 0 </div></td><td scope="row"><div id="XRP"> 0 </div></td><td scope="row"><div id="DASH"> 0 </div></td><td scope="row"><div id="ZEC"> 0 </div></td></tr>
+                    <tr><td scope="row"><div id="Coins"><b>Coins</b></div></td><td scope="row"><input style="max-width:64px" type="number" id="coin-BTC" value="0"></td><td scope="row"><input style="max-width:64px" type="number"  id="coin-ETH" value="0">  </td><td scope="row"><input style="max-width:64px" type="number"  id="coin-LTC" value="0">  </td><td scope="row"><input style="max-width:64px" type="number"  id="coin-XRP" value="0">  </td><td scope="row"><input style="max-width:64px" type="number"  id="coin-DASH" value="0"> </td><td scope="row"><input style="max-width:64px" type="number"  id="coin-ZEC" value="0"> </td></tr>
+                    <tr><td scope="row"><div id="Total"><b>Total</b></div></td><td scope="row"><div id="total-BTC">0</div></td><td scope="row"><div id="total-ETH"> 0 </div></td><td scope="row"><div id="total-LTC"> 0 </div></td><td scope="row"><div id="total-XRP"> 0 </div></td><td scope="row"><div id="total-DASH"> 0 </div></td><td scope="row"><div id="total-ZEC"> 0 </div></td></tr>
+                    <tr><td scope="row"><div id="Total_USD_desc" style="max-width:64px"><b>Total USD</b></div></td><td scope="row"><div id="total_USD_value">0</div></td><td scope="row"><div id="desc_brl_usd" style="max-width:64px"><b>U$D to BRL</b></div></td><td scope="row"><div id="BRL_USD">0</div></td><td scope="row"><div id="Total_BRL_desc" style="max-width:64px"><b>Total est. BRL</b></div></td><td scope="row"><div id="total_BRL_value">0</div></td>
                     <script source="">
 
                     var brl_usd_conv = 0;
@@ -153,6 +158,10 @@
                     </script>
 
                 </table>
+                </div>
+                </div>
+                </div>
+                </div>
 
             </div>
         </div>
